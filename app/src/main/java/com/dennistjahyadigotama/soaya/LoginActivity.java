@@ -53,7 +53,8 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
         context = getApplicationContext();
 
         sharedPreferences = getSharedPreferences("prefs", MODE_PRIVATE);
-
+        /*Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(intent);*/
         if (sharedPreferences.getBoolean(QuickstartPreferences.ALLOW_LOGIN, false)) {
             if (sharedPreferences.getString(QuickstartPreferences.EMAIL, null) != null) {
                 User.email = sharedPreferences.getString(QuickstartPreferences.EMAIL, "");
@@ -90,8 +91,10 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
     private void signIn() {
         mGoogleApiClient.clearDefaultAccountAndReconnect();
 
-        Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
-        startActivityForResult(signInIntent, RC_SIGN_IN);
+        Intent intent = new Intent(getApplicationContext(), RegisterActivity.class);
+        startActivity(intent);
+        /*Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
+        startActivityForResult(signInIntent, RC_SIGN_IN);*/
 
     }
 

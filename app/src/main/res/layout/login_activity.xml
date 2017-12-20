@@ -31,12 +31,11 @@ android:fitsSystemWindows="true"
             android:layout_height="40dp"
             android:text="Login"
             android:id="@+id/buttonLogin"
-            android:layout_marginTop="20dp"
-            android:layout_below="@+id/textView"
-            android:layout_centerHorizontal="true"
+            android:layout_marginTop="18dp"
             android:backgroundTint="#f44336"
 
-            />
+            android:layout_below="@+id/textView"
+            android:layout_centerHorizontal="true" />
 
 
 
